@@ -1,0 +1,85 @@
+---
+title: "Latihan Modul4"
+author: "Windy Febrianti Ode/123200036"
+date: "2022-09-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+library(dslabs)
+data(murders)
+str(murders)
+head(murders)
+tail(murders)
+
+```
+##Nomor 1
+```{r}
+library(dslabs)
+data("murders")
+pop<-murders$population
+sort(pop)
+
+min(pop)
+
+```
+##NOmor 2
+```{r}
+order(pop)
+```
+##Nomor3
+```{r}
+
+a<-which.min(pop)
+
+
+```
+
+##Nomor 4
+```{r}
+x<-which.min(pop)
+soal<-c(x, murders$state[x], murders$population[x])
+soal
+```
+##Nomor 5
+```{r}
+temp <- c(35,88,42,84,81,30)
+city <- c("Beijing", "Lagos", "Paris", "Rio de Jeneiro", "San Juan", "Toronto")
+city_temp <- data.frame(name = city, temperature = temp)
+ranks<-rank(city_temp)
+ranks
+```
+
+##Nomor 6
+```{r}
+temp <- c(35,88,42,84,81,30)
+city <- c("Beijing", "Lagos", "Paris", "Rio de Jeneiro", "San Juan", "Toronto")
+city_temp <- data.frame(name = city, temperature = temp)
+ind <- order(city_temp)
+ind
+
+```
+
+##nomor 7
+```{r}
+
+```
+##Nomor 8
+```{r}
+xh <- with(murders , total/population * 100000)
+hist(xh)
+
+```
+
+##Nomor 9
+```{r}
+pop <- murders$population / 10^6
+tot <- murders$total 
+plot(pop,tot)
+```

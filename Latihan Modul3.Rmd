@@ -1,0 +1,54 @@
+---
+title: "Latihan Modul3"
+author: "Windy Febrianti Ode"
+date: "2022-09-21"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#### Modul 3 
+
+## 1
+```{r}
+library(dslabs)
+data(murders)
+str(murders)
+
+# Terdiri dari 51 negara
+```
+
+##2
+```{r}
+
+data.frame(murders)
+
+#Nama kolom state, abb, region, population, total
+```
+
+##3 
+```{r}
+a<-murders$abb
+class(a)
+a
+```
+
+##4
+```{r}
+b<-murders[["abb"]]
+class(b)
+b
+#ya a dan b bernilai sama
+```
+
+##5
+```{r}
+length(levels(murders$region))
+```
+
+##6
+```{r}
+X=c(murders$state,murders$region)
+table(X)
+
+```
